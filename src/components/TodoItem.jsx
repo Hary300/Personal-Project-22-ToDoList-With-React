@@ -11,7 +11,7 @@ export default function TodoItem({ todos, setTodos }) {
           >
             <div className='flex justify-center items-center gap-4'>
               <button
-                className='size-8 rounded-lg border-2 border-[#fe643b] cursor-pointer flex justify-center items-center'
+                className='cursor-pointer flex justify-center items-center'
                 onClick={() =>
                   setTodos(
                     todos.map((todo, indexTodo) => {
@@ -28,7 +28,7 @@ export default function TodoItem({ todos, setTodos }) {
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 24 24'
                     fill='#fe643b'
-                    className='size-6'
+                    className='size-8'
                   >
                     <path
                       fillRule='evenodd'
@@ -37,7 +37,7 @@ export default function TodoItem({ todos, setTodos }) {
                     />
                   </svg>
                 ) : (
-                  ''
+                  <div className='size-8 rounded-lg border-2 border-[#fe643b] '></div>
                 )}
               </button>
               {todo.text}
