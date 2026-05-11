@@ -7,7 +7,7 @@ export default function TodoList() {
   return (
     <>
       <TodoInput todos={todos} setTodos={setTodos} />
-      <TodoItem todos={todos} />
+      <TodoItem todos={todos} setTodos={setTodos} />
     </>
   );
 }

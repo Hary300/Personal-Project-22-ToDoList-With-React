@@ -18,7 +18,9 @@ export default function TodoInput({ todos, setTodos }) {
       {/* button */}
       <button
         className='flex justify-center items-center text-[#681d11] rounded-2xl bg-[#fe643b] w-[15%] cursor-pointer  transition-all duration-300 shadow-[0_0_5px_rgba(0,0,0,0.3)] active:shadow-none'
-        onClick={() => setTodos([...todos, { text: input, done: false }])}
+        onClick={() =>
+          input && setTodos([...todos, { text: input, done: false }])
+        }
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
