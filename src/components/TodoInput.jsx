@@ -13,14 +13,21 @@ export default function TodoInput({ todos, setTodos }) {
         onChange={(e) => {
           setInput(e.target.value);
         }}
+        onKeyDown={(e) => {
+          if (e.code === 'Enter') {
+            input && setTodos([...todos, { text: input, done: false }]);
+            setInput('');
+          }
+        }}
       />
 
       {/* button */}
       <button
         className='flex justify-center items-center text-[#681d11] rounded-2xl bg-[#fe643b] w-[15%] cursor-pointer  transition-all duration-300 shadow-[0_0_5px_rgba(0,0,0,0.3)] active:shadow-none'
-        onClick={() =>
-          input && setTodos([...todos, { text: input, done: false }])
-        }
+        onClick={() => {
+          input && setTodos([...todos, { text: input, done: false }]);
+          setInput('');
+        }}
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'

@@ -7,7 +7,7 @@ export default function TodoList() {
     const saved = localStorage.getItem('todos');
     return saved ? JSON.parse(saved) : [];
   });
-  console.log(localStorage);
+
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
