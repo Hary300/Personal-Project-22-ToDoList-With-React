@@ -18,7 +18,11 @@ export default function TodoItem({ todos, setTodos }) {
                 index={index}
               />
 
-              {todo.text}
+              <p
+                className={`${todo.done ? 'line-through' : ''} text-lg decoration-[#fe643b] decoration-2`}
+              >
+                {todo.text}
+              </p>
             </div>
             <TodoDelete todos={todos} setTodos={setTodos} index={index} />
           </li>
